@@ -23,11 +23,13 @@ class React(Cog_Extension):
     async def pump(self, ctx):
         date = time.strftime("%m/%d").lstrip('0')
         urls = read_url()
-        if urls[date]:
+        try:
+            urls[date]
             url = random.choice(urls[date])
             await ctx.send(url)
-        else:
-            urls = get_beauty_data()
+        except:
+            get_beauty_data()
+            urls = read_url()
             url = random.choice(urls[date])
             await ctx.send(url)
 

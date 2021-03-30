@@ -5,7 +5,6 @@ from bs4 import BeautifulSoup
 import re
 import json
 
-
 PTT_URL = 'https://www.ptt.cc'
 
 
@@ -70,8 +69,7 @@ def get_beauty_data():
             if page:
                 img_urls = parse(page)
                 for img_url in img_urls:
-                  url.append(img_url)
+                    url.append(img_url)
         data[date] = url
         with open('url.json', 'w', newline='') as jsonfile:
-          json.dump(data, jsonfile)
-        return data
+            json.dump(data, jsonfile)
