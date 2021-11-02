@@ -1,4 +1,5 @@
 # discord_APEX_Bot
+因沒在維護，如爬取網站有更動，會造成錯誤。
 [邀請機器人連結](https://discord.com/oauth2/authorize?client_id=824491954930319371&scope=bot&permissions-0)
 
 指令
